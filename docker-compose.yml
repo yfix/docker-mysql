@@ -1,0 +1,11 @@
+mysql:
+  image: yfix/mysql
+  container_name: yfix_test_mysql
+  ports:
+    - 33061:3306
+  restart: always
+  environment:
+    - MYSQL_ROOT_PASSWORD=123456
+  volumes:
+    - ./container-files/var/lib/mysql:/var/lib/mysql
+#    - ./container-files/etc/mysql/my.cnf:/etc/mysql/my.cnf
