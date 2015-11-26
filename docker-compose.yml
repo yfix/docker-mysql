@@ -6,6 +6,9 @@ mysql:
   restart: always
   environment:
     - MYSQL_ROOT_PASSWORD=123456
+    - MYSQL_DATABASE=yf_for_unit_tests
+    - MYSQL_USER=yf_test
+    - MYSQL_PASSWORD=yf_test
   volumes:
     - ./container-files/var/lib/mysql:/var/lib/mysql
 #    - ./container-files/etc/mysql/my.cnf:/etc/mysql/my.cnf
