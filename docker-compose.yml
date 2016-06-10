@@ -1,5 +1,6 @@
 mysql:
   image: yfix/mysql
+  build: .
   container_name: yfix_test_mysql
   ports:
     - 33061:3306
@@ -10,5 +11,5 @@ mysql:
     - MYSQL_USER=yf_test
     - MYSQL_PASSWORD=yf_test
   volumes:
-    - ./container-files/var/lib/mysql:/var/lib/mysql
-#    - ./container-files/etc/mysql/my.cnf:/etc/mysql/my.cnf
+    - ./docker/var/lib/mysql:/var/lib/mysql
+    - ./docker/etc/mysql/conf.d/override.cnf:/etc/mysql/conf.d/override.cnf
