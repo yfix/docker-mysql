@@ -1,15 +1,19 @@
-mysql:
-  image: yfix/mysql
-  build: .
-  container_name: yfix_test_mysql
-  ports:
-    - 33061:3306
-  restart: always
-  environment:
-    - MYSQL_ROOT_PASSWORD=123456
-    - MYSQL_DATABASE=yf_for_unit_tests
-    - MYSQL_USER=yf_test
-    - MYSQL_PASSWORD=yf_test
-  volumes:
-    - ./docker/var/lib/mysql:/var/lib/mysql
-    - ./docker/etc/mysql/conf.d/override.cnf:/etc/mysql/conf.d/override.cnf
+version: "2"
+services:
+  mysql:
+#    image: yfix/mysql
+    build: .
+    container_name: yfix_test_mysql
+
+    ports:
+      - 33061:3306
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=yf_for_unit_tests
+      - MYSQL_USER=yf_test
+      - MYSQL_PASSWORD=yf_test
+    volumes:
+      - ./docker/var/log/mysql:/var/log/mysql
+      - ./docker/var/lib/mysql:/var/lib/mysql
+      - ./docker/etc/mysql/conf.d/override.cnf:/etc/mysql/conf.d/override.cnf

@@ -36,22 +36,22 @@ event_scheduler                 = ON
 # sql_mode                        = STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION
 sql_mode                        = ''
 
-log_error                       = /var/log/mysql/mysql_error.log
-general_log_file                = /var/log/mysql/mysql_general.log
-general_log                     = 1
-slow_query_log                  = 1
-slow_query_log_file             = /var/log/mysql/mysql_slow.log
-long_query_time                 = 1
-# log_queries_not_using_indexes  = 1
+# log_error                       = /var/log/mysql/mysql_error.log
+# general_log_file                = /var/log/mysql/mysql_general.log
+# general_log                     = 1
+# slow_query_log                  = 1
+# slow_query_log_file             = /var/log/mysql/mysql_slow.log
+# long_query_time                 = 1
+# # log_queries_not_using_indexes  = 1
 
 [mysqld_safe]
-log_error                       = /var/log/mysql/mysql_error.log
-general_log_file                = /var/log/mysql/mysql_general.log
-general_log                     = 1
-slow_query_log                  = 1
-slow_query_log_file             = /var/log/mysql/mysql_slow.log
-long_query_time                 = 1
-# log_queries_not_using_indexes  = 1
+# log_error                       = /var/log/mysql/mysql_error.log
+# general_log_file                = /var/log/mysql/mysql_general.log
+# general_log                     = 1
+# slow_query_log                  = 1
+# slow_query_log_file             = /var/log/mysql/mysql_slow.log
+# long_query_time                 = 1
+# # log_queries_not_using_indexes  = 1
 
 [mysqldump]
 quick
