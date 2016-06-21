@@ -6,7 +6,7 @@ bind-address                    = 0.0.0.0
 
 max_allowed_packet              = 128M
 #key_buffer_size                 = 32M
-#join_buffer_size                = 256k;
+# join_buffer_size                = 256k;
 #thread_cache_size               = 50
 
 # http://www.percona.com/blog/2009/11/16/table_cache-negative-scalability/
@@ -18,23 +18,40 @@ wait_timeout                    = 30
 
 event_scheduler                 = ON
 
-#innodb_buffer_pool_size         = 4G
-#innodb_log_file_size            = 100M
-#innodb_lock_wait_timeout        = 10
-#innodb_thread_concurrency       = 2
-#innodb_flush_method             = O_DIRECT
-#innodb_flush_log_at_trx_commit  = 0
-#innodb-doublewrite              = 0
-#innodb-file-format              = barracuda
-#innodb_file_per_table           = 1
-#innodb_strict_mode              = off;
+# innodb_buffer_pool_size         = 4G
+# innodb_log_file_size            = 100M
+# innodb_lock_wait_timeout        = 10
+# innodb_thread_concurrency       = 2
+# innodb_flush_method             = O_DIRECT
+# innodb_flush_log_at_trx_commit  = 0
+# innodb-doublewrite              = 0
+# innodb-file-format              = barracuda
+# innodb_file_per_table           = 1
+# innodb_strict_mode              = off;
 
-#query-cache-type                = 1
-#query_cache_limit               = 1M
-#query_cache_size                = 128M
+# query-cache-type                = 1
+# query_cache_limit               = 1M
+# query_cache_size                = 128M
 
-#sql_mode                        = STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION
+# sql_mode                        = STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION
 sql_mode                        = ''
+
+log_error                       = /var/log/mysql/mysql_error.log
+general_log_file                = /var/log/mysql/mysql_general.log
+general_log                     = 1
+slow_query_log                  = 1
+slow_query_log_file             = /var/log/mysql/mysql_slow.log
+long_query_time                 = 1
+# log_queries_not_using_indexes  = 1
+
+[mysqld_safe]
+log_error                       = /var/log/mysql/mysql_error.log
+general_log_file                = /var/log/mysql/mysql_general.log
+general_log                     = 1
+slow_query_log                  = 1
+slow_query_log_file             = /var/log/mysql/mysql_slow.log
+long_query_time                 = 1
+# log_queries_not_using_indexes  = 1
 
 [mysqldump]
 quick
