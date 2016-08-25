@@ -14,7 +14,7 @@ table_open_cache                = 64
 
 max_connections                 = 1000
 open-files-limit                = 8096
-wait_timeout                    = 30
+wait_timeout                    = 3600
 
 event_scheduler                 = ON
 
