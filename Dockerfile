@@ -1,4 +1,4 @@
-FROM mysql:5.7
+FROM mysql:8
 
 MAINTAINER Yuri Vysotskiy (yfix) <yfix.dev@gmail.com>
 
